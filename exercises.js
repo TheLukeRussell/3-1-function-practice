@@ -43,21 +43,21 @@
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
 
-let translate = (text) => {
-  let vowel = ['a', 'e', 'i', 'o', 'u'];
-  let string = text.toLowerCase();
-  let y = "";
-for (let i = 0; i < string.length; i++) {
-  let current = string.charAt(i);
-  if (vowel.indexOf(current) !== -1) {
-    y = (y + (current));
-  } else {
-    y = (y + (current + "o" + current));
-}
-}
-return y;
-}
-console.log(translate("this is fun"));
+// let translate = (char) => {
+//   let vowel = ['a', 'e', 'i', 'o', 'u'];
+//   let string = char.toLowerCase();
+//   let y = "";
+// for (let i = 0; i < string.length; i++) {
+//   let current = string.charAt(i);
+//   if (vowel.indexOf(current) !== -1) {
+//     y = (y + (current));
+//   } else {
+//     y = (y + (current + "o" + current));
+// }
+// }
+// return y;
+// }
+// console.log(translate("this is fun"));
 
 
 
@@ -65,15 +65,36 @@ console.log(translate("this is fun"));
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
 
-
-
-
+//   let sum = (numbers) => {
+//     let result = 0
+//     for (let i = 1; i <= numbers.length; i++) {
+//       result += i;
+//     }
+//     return result;
+//   }
+//   console.log(sum([1,2,3,4]));
+//
+// let multiply = (numbers) => {
+//   let result = 1;
+//   for (let i = 1; i <= numbers.length; i++) {
+//     result *= i
+//   }
+//   return result;
+// }
+// console.log(multiply([1,2,3,4]));
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
 
-
+  let reverse = (str) => {
+  let text = ''
+  for (let i = str.length - 1; i >= 0; i--) {
+  text += str[i];
+}
+  return text;
+}
+console.log(reverse('ratset gaj'));
 
 
 
@@ -81,9 +102,11 @@ console.log(translate("this is fun"));
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
 
+let findLongestWord = (array) => {
+  
+}
 
-
-
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.

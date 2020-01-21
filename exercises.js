@@ -4,49 +4,60 @@
   // ---------------------
   // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
 
-let max = (num1, num2) => {
-if (num1 > num2) {
-  console.log(`${num1} is larger than ${num2}`);
-} else {
-  console.log(`${num1} is smaller than ${num2}`);
-}
-return;
-}
-max(25, 37);
+// let max = (num1, num2) => {
+// if (num1 > num2) {
+//   console.log(`${num1} is larger than ${num2}`);
+// } else {
+//   console.log(`${num1} is smaller than ${num2}`);
+// }
+// return;
+// }
+// max(25, 37);
 
   // ---------------------
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
-let maxOfThree = (num1, num2, num3) => {
-  let max = Math.max(num1, num2, num3);
-  return max;
-}
-maxOfThree(29,4,52);
+// let maxOfThree = (num1, num2, num3) => {
+//   let max = Math.max(num1, num2, num3);
+//   return max;
+// }
+// maxOfThree(29,4,52);
 
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
-
-  let vowels = (['a', 'e', 'i', 'o', 'u'])
-  let isVowel = (character) => {
-  for(let i = 0; i <= vowels.length; i++) {
-    if (character != vowels[i]) {
-continue;
-}
-    return true;
-  }
-  return false;
-
-}
+  // let vowels = ['a', 'e', 'i', 'o', 'u'];
+  // let isVowel = (char) => {
+  //   for (let i = 0; i <= vowels.length; i++) {
+  //     if (char !== vowels[i]) {
+  //       continue;
+  //     }
+  //       return true;
+  //     }
+  //       return false;
+  //   }
+  // console.log(isVowel('a'));
 
 
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
-let rovarspraker = () => {
-  
-}
 
+let translate = (text) => {
+  let vowel = ['a', 'e', 'i', 'o', 'u'];
+  let string = text.toLowerCase();
+  let y = "";
+for (let i = 0; i < string.length; i++) {
+  let current = string.charAt(i);
+  if (vowel.indexOf(current) !== -1) {
+    y = (y + (current));
+  } else {
+    y = (y + (current + "o" + current));
+}
+}
+return y;
+}
+console.log(translate("this is fun"));
 
 
 

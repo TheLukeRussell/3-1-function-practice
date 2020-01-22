@@ -27,14 +27,16 @@
 // to a variable containing an anonymous
 // function
 
-function doSomethingCool() {
-  console.log("Something Cool!");
-}
+// function doSomethingCool() {
+//   console.log("Something Cool!");
+// }
 
 // Put your answer below -------------------------
 
-
-// -----------------------------------------------
+let x = function () {
+  console.log("Something Cool!")
+}
+x();
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -45,29 +47,31 @@ function doSomethingCool() {
 // after 2 seconds. Refactor to use an anonymous
 // function
 
-function sayHi() {
-  alert("Hello, World!");
-}
-
-setTimeout(sayHi, 2000);
+// function sayHi() {
+//   alert("Hello, World!");
+// }
+//
+// setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
+let z = () => {
+  alert("Hello, World!");
+}
 
-// -----------------------------------------------
-
+setTimeout(z, 100000000000000);
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
 // 3. --------------------------------------------
 
-// The code below will log the letter twice. What
-// is the order that will be logged?
+The code below will log the letter twice. What
+is the order that will be logged?
 
-// [a]: x then y then z
-// [b]: y then z
-// [c]: z then y
-// [d]: x then z
+[a]: x then y then z
+[b]: y then z
+[c]: z then y
+[d]: x then z
 
 // Please explain your answer.
 
@@ -84,7 +88,7 @@ console.log("The letter is", letter);
 // Put your answer below -------------------------
 
 
-// -----------------------------------------------
+The letter 'z' will be logged first because the letter 'y' is nested inside a function and when we console.log the letter, the z will appear to be logged first.
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////

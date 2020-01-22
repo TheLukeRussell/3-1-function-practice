@@ -65,14 +65,14 @@ setTimeout(z, 100000000000000);
 
 // 3. --------------------------------------------
 
-The code below will log the letter twice. What
-is the order that will be logged?
-
-[a]: x then y then z
-[b]: y then z
-[c]: z then y
-[d]: x then z
-
+// The code below will log the letter twice. What
+// is the order that will be logged?
+//
+// [a]: x then y then z
+// [b]: y then z
+// [c]: z then y
+// [d]: x then z
+//
 // Please explain your answer.
 
 var letter = "x";
@@ -88,7 +88,8 @@ console.log("The letter is", letter);
 // Put your answer below -------------------------
 
 
-The letter 'z' will be logged first because the letter 'y' is nested inside a function and when we console.log the letter, the z will appear to be logged first.
+// The letter 'z' will be logged first because you define letter and initially assign it "x", but never console log that. Since "y"
+// is told to wait 1 millisecond to log to the console, it immediately logs "z" and logs "y" just shortly after.
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -123,28 +124,38 @@ var reverseStr = function(str) {
 // Refactor this function to use an object
 // instead of an if/else statement.
 
-var spanishColor = function(colorName) {
-  if (colorName.toLowerCase() === "rojo") {
-    return "#ff0000";
-  }
-  else if (colorName.toLowerCase() === "blanco") {
-    return "#ffffff";
-  }
-  else if (colorName.toLowerCase() === "azul") {
-    return "#0000ff";
-  }
-  else if (colorName.toLowerCase() === "verde") {
-    return "#00ff00";
-  }
-  else if (colorName.toLowerCase() === "negro") {
-    return "#000000";
-  }
-};
+// var spanishColor = function(colorName) {
+//   if (colorName.toLowerCase() === "rojo") {
+//     return "#ff0000";
+//   }
+//   else if (colorName.toLowerCase() === "blanco") {
+//     return "#ffffff";
+//   }
+//   else if (colorName.toLowerCase() === "azul") {
+//     return "#0000ff";
+//   }
+//   else if (colorName.toLowerCase() === "verde") {
+//     return "#00ff00";
+//   }
+//   else if (colorName.toLowerCase() === "negro") {
+//     return "#000000";
+//   }
+// };
 
 // Put your answer below -------------------------
 
-
-// -----------------------------------------------
+// let spanishColor = (colorName) => {
+//   let colors = {
+//     'rojo' = '#ff0000',
+//     'blanco' = '#ffffff',
+//     'azul' = '#0000ff',
+//     'verde' = '#00ff00',
+//     'negro' = '#000000'
+//   }
+//   return colors[colorName];
+// };
+//
+// console.log(spanishColor('azul'));
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -156,12 +167,13 @@ var spanishColor = function(colorName) {
 // Break it up so that the declaration and
 // assignment are happening on 2 seperate lines.
 
-var foo = "bar";
+// var foo = "bar";
 
 // Put your answer below -------------------------
 
 
-// -----------------------------------------------
+let foo;
+foo = "bar";
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -210,8 +222,18 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+(function() {
+  'use strict';
+  var score = 0;
 
-// -----------------------------------------------
+  var increaseScore = function() {
+    score++;
+  };
+
+  var decreaseScore = function() {
+    score--;
+  };
+}());
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -222,17 +244,21 @@ var decreaseScore = function() {
 // twoPlusTwo gets set to `undefined`. Refactor
 // the function to make it work.
 
-var addNumbers = function(numberA, numberB) {
-  console.log(numberA + numberB);
-};
-
-var twoPlusTwo = addNumbers(2,2);
+// var addNumbers = function(numberA, numberB) {
+//   console.log(numberA + numberB);
+// };
+//
+// var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
 
-// -----------------------------------------------
+let addNumbers = (numberA, numberB) => {
+  return (numberA + numberB);
+};
 
+let twoPlusTwo = addNumbers(2,2)
+console.log(twoPlusTwo);
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
@@ -248,16 +274,23 @@ var twoPlusTwo = addNumbers(2,2);
 // Then refactor the function to have a default
 // amount of 1 if no param is given.
 
-var speed = 0;
-
-var accelerate = function(amount) {
-  speed += amount;
-};
+// var speed = 1;
+//
+// var accelerate = function(amount) {
+//   speed += amount;
+// };
 
 // Put your answer below -------------------------
 
+//there is no return statement and it does not give any parameter when you run the function.
 
-// -----------------------------------------------
+let speed = 0;
+
+let accelerate = function(amount) {
+  amount = (typeof amount !== 'undefined') ?  amount : 1;
+  return speed = amount;
+};
+console.log(accelerate(4));
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -293,14 +326,12 @@ var accelerate = function(amount) {
 //       ...
 //     });
 
-var callLater = function(timeout, callback) {
-  setTimeout(callback, timeout);
-};
+// var callLater = function(timeout, callback) {
+//   setTimeout(callback, timeout);
+// };
 
 // Put your answer below -------------------------
 
-
-// -----------------------------------------------
 
 //////////////////////////////////////////////////
 })();

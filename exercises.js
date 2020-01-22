@@ -21,22 +21,22 @@
   //   let max = Math.max(num1, num2, num3);
   //   return max;
   // }
-  // maxOfThree(29,4,52);
+  // console.log(maxOfThree(29,4,52));
 
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
-  // let vowels = ['a', 'e', 'i', 'o', 'u'];
-  // let isVowel = (char) => {
-  //   for (let i = 0; i <= vowels.length; i++) {
-  //     if (char !== vowels[i]) {
-  //       continue;
-  //     }
-  //       return true;
-  //     }
-  //       return false;
-  //   }
-  // console.log(isVowel('a'));
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let isVowel = (char) => {
+    for (let i = 0; i <= vowels.length; i++) {
+      if (char !== vowels[i]) {
+        continue;
+      }
+        return true;
+      }
+        return false;
+    }
+  console.log(isVowel('a'));
 
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
@@ -127,6 +127,9 @@
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
-  // ---------------------
 
+// {a:7, b:9, c:6}
+//
+// console.assert(charFreq('aaabccbcbbcbabbcbababaa').a===7)
+//
 })();

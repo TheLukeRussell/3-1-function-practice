@@ -33,10 +33,10 @@
 
 // Put your answer below -------------------------
 
-let x = function () {
-  console.log("Something Cool!")
-}
-x();
+// let x = function () {
+//   console.log("Something Cool!")
+// }
+// x();
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -55,11 +55,11 @@ x();
 
 // Put your answer below -------------------------
 
-let z = () => {
-  alert("Hello, World!");
-}
-
-setTimeout(z, 100000000000000);
+// let z = () => {
+//   alert("Hello, World!");
+// }
+//
+// setTimeout(z, 100000000000000);
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
@@ -75,15 +75,15 @@ setTimeout(z, 100000000000000);
 //
 // Please explain your answer.
 
-var letter = "x";
-
-setTimeout(function(){
-  letter = "y";
-  console.log("The letter is", letter);
-}, 1);
-
-letter = "z";
-console.log("The letter is", letter);
+// var letter = "x";
+//
+// setTimeout(function(){
+//   letter = "y";
+//   console.log("The letter is", letter);
+// }, 1);
+//
+// letter = "z";
+// console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
@@ -100,13 +100,13 @@ console.log("The letter is", letter);
 // of the function is 5 lines of code. Refactor
 // this function to do the same thing with 1 line
 
-var reverseStr = function(str) {
-  var arr;
-  arr = str.split("");
-  arr = arr.reverse();
-  str = arr.join("");
-  return str;
-};
+// var reverseStr = function(str) {
+//   var arr;
+//   arr = str.split("");
+//   arr = arr.reverse();
+//   str = arr.join("");
+//   return str;
+// };
 
 // Put your answer below -------------------------
 
@@ -171,9 +171,9 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
-
-let foo;
-foo = "bar";
+//
+// let foo;
+// foo = "bar";
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -187,10 +187,10 @@ foo = "bar";
 // to specify a number of times to call the given
 // function.
 
-var callTenTimes = function(callback) {
-  var range = _.range(10);
-  _.each(range, callback);
-};
+// var callTenTimes = function(callback) {
+//   var range = _.range(10);
+//   _.each(range, callback);
+// };
 
 // Put your answer below -------------------------
 
@@ -210,30 +210,30 @@ var callTenTimes = function(callback) {
 
 // HINT: "global scope"
 
-var score = 0;
-
-var increaseScore = function() {
-  score++;
-};
-
-var decreaseScore = function() {
-  score--;
-};
+// var score = 0;
+//
+// var increaseScore = function() {
+//   score++;
+// };
+//
+// var decreaseScore = function() {
+//   score--;
+// };
 
 // Put your answer below -------------------------
 
-(function() {
-  'use strict';
-  var score = 0;
-
-  var increaseScore = function() {
-    score++;
-  };
-
-  var decreaseScore = function() {
-    score--;
-  };
-}());
+// (function() {
+//   'use strict';
+//   var score = 0;
+//
+//   var increaseScore = function() {
+//     score++;
+//   };
+//
+//   var decreaseScore = function() {
+//     score--;
+//   };
+// }());
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
@@ -253,12 +253,12 @@ var decreaseScore = function() {
 // Put your answer below -------------------------
 
 
-let addNumbers = (numberA, numberB) => {
-  return (numberA + numberB);
-};
-
-let twoPlusTwo = addNumbers(2,2)
-console.log(twoPlusTwo);
+// let addNumbers = (numberA, numberB) => {
+//   return (numberA + numberB);
+// };
+//
+// let twoPlusTwo = addNumbers(2,2)
+// console.log(twoPlusTwo);
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
@@ -284,13 +284,13 @@ console.log(twoPlusTwo);
 
 //there is no return statement and it does not give any parameter when you run the function.
 
-let speed = 0;
-
-let accelerate = function(amount) {
-  amount = (typeof amount !== 'undefined') ?  amount : 1;
-  return speed = amount;
-};
-console.log(accelerate(4));
+// let speed = 0;
+//
+// let accelerate = function(amount) {
+//   amount = (typeof amount !== 'undefined') ?  amount : 1;
+//   return speed = amount;
+// };
+// console.log(accelerate(4));
 
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
